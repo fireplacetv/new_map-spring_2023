@@ -1,4 +1,78 @@
 {
-    "sources": {},
-    "layers": []
+    "sources": {
+        "sites": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        },
+        "neighborhoods": {
+            "type": "geojson",
+            "data": {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        }
+    },
+    "layers": [
+        {
+            "id": "neighborhoods-outline",
+            "type": "line",
+            "source": "neighborhoods",
+            "paint": {
+                "line-color": "black",
+                "line-width": 3,
+                "line-opacity": 0.8
+            },
+            "filter": [
+                "!=",
+                ["get","count"],
+                0
+            ]
+        },
+        {
+            "id": "neighborhoods-fill-extrusion",
+            "type": "fill-extrusion",
+            "source": "neighborhoods",
+            "paint": {
+                "fill-extrusion-color": [
+                    "step",
+                    ["get","count"],
+                    "#fef0d9",
+                    50,
+                    "#fdd49e",
+                    100,
+                    "#fdbb84",
+                    300,
+                    "#fc8d59",
+                    600,
+                    "#e34a33",
+                    1000,
+                    "#b30000"
+                ],
+                "fill-extrusion-opacity": 1,
+                "fill-extrusion-height": [
+                    "*",
+                    ["get", "count"],
+                    5
+                ]
+            },
+            "filter": [
+                "!=",
+                ["get","count"],
+                0
+            ]
+        },
+        {
+            "id": "sites-circle",
+            "type": "circle",
+            "source": "sites",
+            "paint": {
+                "circle-color": "red",
+                "circle-opacity": 0.1,
+                "circle-radius": 2
+            }
+        }
+    ]
 }
