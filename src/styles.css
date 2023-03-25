@@ -15,3 +15,42 @@ main {
 #map {
     height: 100%;
 }
+
+header, #popup, #legend {
+    position: fixed;
+    z-index: 99;
+    color: orange;
+    background-color: rgba(32, 32, 32, 0.7);
+    border: 3px solid black;
+    padding: 3px 20px 3px 20px;
+    font-family: monospace;
+}
+
+header {
+    top: 10px;
+    left: 10px;
+}
+
+#popup {
+    display: none;
+    top: 100px;
+    left: 10px;
+}
+
+#legend {
+    display: block;
+    bottom: 30px;
+    right: 10px; 
+    z-index: 299;
+}
+
+.legend-color {
+    display: inline-block;
+    height: 10px;
+    width: 20px;
+    border: 1px solid black;
+}
+
+h1 {
+    margin: 0 0 ;
+}

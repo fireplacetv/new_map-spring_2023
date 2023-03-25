@@ -1,9 +1,10 @@
 {
     "container": "map",
     "accessToken": "pk.eyJ1IjoiZmlyZXBsYWNldHYiLCJhIjoiY2o2MnM5eWo0MWIybjMydDY1a2p0enJiciJ9.15pcvwTbGHv9Ey5rJMoGeA",
-    "style": "mapbox://styles/fireplacetv/ck4lxzm0l1i6w1cp4u7rw1ut1",
+    "style": "mapbox://styles/fireplacetv/clfo81l2j009801nzfo5a8hw5",
     "center": [-118.34253751847888, 33.98831108722463],
     "zoom": 9.75,
-    "bearing": 59,
-    "pitch": 60
+    "bearing": 0,
+    "pitch": 40,
+    "customAttribution": "<a href=\"http://www.historicplacesla.org/\" target=\"_blank\">Historic Places LA</a> | <a href=\"http://latimes.com/\" target=\"_blank\">LA Times</a>"
 }
